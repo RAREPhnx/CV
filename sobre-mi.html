@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseñador Freelancer</title>
+<!--Este es para estandarizar entre exploradores-->
+  <link rel="preload" href="CSS/normalize.css">
+  <link rel="stylesheet" href="CSS/normalize.css">
+<!--Este es el link que da el fondo requerido, siempre hay que ponerlo antes de css-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Krub&display=swap" rel="stylesheet">
+<!--preload carga el CSS para que lo cargue mas rapido antes de abrir la pagina-->
+<!--CSS personalizado debe ser lu ultimo en agregar-->  
+<link rel="preload" href="CSS/Styles.css" as="style">
+  <link rel="stylesheet" href="CSS/Styles.css">
+</head>
+
+<body>
+  <header>
+      <h1 class="titulo">Ernesto A. Ramirez <span>CV</span> </h1>
+  </header>
+<div class="nav-bg"> <!--div y class utilizado para dividir la estructura del nav e identificar toda la estrucutra para ponerle css-->
+  <nav class="navegacion-principal contenedor"><!--el class sirve para poner una clasificacion del tipo que es y poder especificar--><!--Si se pone espacio en el class es como poner otro class-->
+    <a href="index.html">Inicio</a>
+    <a href="sobre-mi.html">Sobre mi</a>
+    <a href="#">Clientes</a>
+    <a href="#">Contacto</a>
+  </nav>
+</div>
+  
+  <section class="hero">
+    <div class="contenido-hero">
+      <h2>Diseño y desarrollo web Freelancer</h2>
+          <p>
+      <!--Este codigo lo da la pagina https://tablericons.com/ para egragar la imagen convectores -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="11" r="3" />
+        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+      </svg>
+     
+            CDMX,MEX
+          </p>
+     
+         <a class="boton" href="#">Contactar</a>
+    </div>
+  
+  </section>
+
+<main class="Texto-general contenedor sombra">
+    <h2>Sobre mi</h2>
+    <h3 >
+        Ingeniero de ventas y soporte técnico experimentado con un historial demostrado de trabajo en la industria de servicios y tecnología de la información. Persona dinámica y proactiva, con iniciativa y alta capacidad para resolver problemas. Capacidad para comunicarse con todos los niveles de una organización y crear relaciones interpersonales efectivas. Capacidad para organizar y priorizar eficazmente la carga de trabajo, cumplir con las fechas de trabajo, brindar un servicio profesional y trabajo en equipo.
+    </h3>
+
+        <div class="yo">
+            
+        </div>
+</main>
+
+<footer>
+  <p class="Texto-general">Todos los derechos reservados, RAREPhnx inc</p>  
+</footer> 
+
+</body>
+</html>

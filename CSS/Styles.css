@@ -1,0 +1,305 @@
+
+/*DISEÑO DE MARCA*/
+    :root{
+        --blanco:#ffffff;
+        --negro:#212121;
+        --primario: #d3dfff;/*se puede poner como rgba para hacerlos transparentes*/
+        --secundario: #5c82e9cb; 
+        --tercero: #f34c4c;
+        --cuarto: #ffffff;     
+        
+        --fuente-principal: 3.8rem;
+    }
+
+
+/*AjusteS GENERALES*/
+    html{
+        font-size: 62.5%;/*Este y el de body hace 1rem = 10px */
+        box-sizing: border-box;/* apply a natural box layout model to all elements, but allowing components to change */
+        /*scroll-snap-type: y mandatory;*//*MOVICMIENTO POR SECCIONES*/
+    }
+
+/*    .servicio h3, .navegacion-principal, .formulario{
+    scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
+*/
+    /* apply a natural box layout model to all elements, but allowing components to change */
+    *, *:before, *:after {/*se puede poner coma para poner dos o mas elementos que tendran las mismas caracteristicas*/
+        box-sizing: inherit;
+    }
+
+
+    body{
+        font-size: 16px;/*Este y el de html hace 1rem = 10px */
+        font-family:Arial, Helvetica, sans-serif;
+    /*Para poner un fondo degradado*/
+        background-image: linear-gradient(to top,/*hacia que lado*/ var(--primario) 0%, var(--blanco) 75%/*en que % debe llegar al segundo color*/);
+    }
+
+    .boton{
+        background-color: var(--secundario);
+        color: var(--blanco);
+        padding: 1rem 3rem;
+        margin-top: 1rem;
+        font-size: 2rem;
+        text-decoration: none;
+        text-transform: uppercase;/*para cambiar a uppercase, lowercase o capitalize*/
+        font-weight: bold;
+        border-radius: .5rem;/*redondear esquinas*/
+        width: 70%;/*para que ocupe la mayor cantidad de espacio cuando se haga chico*/
+        text-align: center;
+        border: none;
+    }
+    @media (min-width: 768px) {
+        .boton{
+        width:auto;   
+        }
+    }
+    .boton:hover{
+        cursor: pointer;
+    }
+
+    /*TIPOGRAFIA*/
+
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;  
+}
+
+/**UTILIDADES**/ 
+.w-sm-100{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-sm-100{
+        width: auto;
+    }
+    
+}
+.flex{
+    display: flex;   
+}
+.alinear-derecha{
+    justify-content: flex-end;   
+}
+
+.color-icono{
+    stroke: var(--cuarto);
+    stroke-width: 2px;
+}
+
+/*Especificos*/
+    .titulo span{
+        font-size: 2rem;
+    }
+
+    .contenedor{
+        max-width: 120rem; /*120rem ayuda a que sea mas presentable*//*le puse 300rem para las teles 5k*/
+        /*max-width ayuda a que se ajuste a todo lo que sea abajo del valor puesto*/
+        margin:0 auto; /*Se maneja en uno solo los 4 valores separados por un espacio 1o= top 2o=right 3o=bottom 4o= lefto (como manecillas del reloj)*/
+    /*tambien se puede solo poner 2 valores el primero arriba y abajo y el segundo izquierda y derecha cuando vas a ocupar valores iguales*/
+    }
+    @media (min-width: 3700px) {
+        .contenedor{
+            max-width: 240rem;
+
+        }
+    }
+    /*NAVEGACION*/
+    .nav-bg{
+        background-color: var(--secundario);
+    }
+    .navegacion-principal {
+        display: flex;/* aunque el nav automaticamente se pone en flex, ponerlo nos habilita nuevas propiedades*/
+        flex-direction: column;/*se tiene que poner para que en los querie se pueda modificar*//*aqui se pone con columnas al menos que haya mas espacio de 480px*/
+    }
+    @media (min-width: 480px) {
+    .navegacion-principal {
+            flex-direction: row;/*con eso ponemos que cuando haya suficiente espacio se haga horizontal*/
+            justify-content: space-between;/*space-btween pone el primero y el utlimo en las equinas y de ahi los demas se distribuyen*/
+        }
+    }
+    .navegacion-principal a{
+        display: block;/*ocupa todo el espacio cada linea*/
+        text-align: center;
+        color: var(--blanco);
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1rem;/*para engordar el elemento */
+    }
+
+    .navegacion-principal a:hover{/*El hover debe estar pegado a la a*/
+        background-color: var(--primario);
+        color: var(--negro);
+
+    }
+    /*Parte de la imagen*/
+    .hero{
+        background-image: url(../img/hero.jpg);/* al estar esto dentro de la carpeta css hay que ponerle .. para que se vaya a la carpeta de arriba y apartir de ahi busce la carpeta img*/
+        background-repeat: no-repeat;/*para cuando la imagen quede chica no se repita*/
+        background-size: cover;/*para que se ajuste al ancho la imagen para que ocupe toda la pantalla*/
+        height: 450px;
+        position: relative;/*el padre siempre tiene que tener posicion relativa para poner al hijo como absoluta*/
+        margin-bottom: 2rem;
+        
+    }
+
+    .contenido-hero{
+        position: absolute;
+        background-color: rgba(0, 0, 0, .6);
+        width: 100%;
+        height: 100%;
+    /*A continuacion es el codigo para alinear vertical y horizontalmente*/  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    
+    .contenido-hero h2{
+        color: var(--blanco);   
+    }
+    .contenido-hero p{
+        color: var(--blanco);
+    }
+
+ /*CUADRO MIS SERVICIOS*/
+
+     .sombra{
+        /*Para poner el bloque con sombra de https://www.cssmatic.com/box-shadow*/
+        box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);/*codigo para caja sombreada*/
+        background-color: var(--blanco);
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+@media (min-width: 768px) {/*Para que haya 3 bloques cuando sea mas grande que un cel*/ 
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);/*Cuantas columnas habra y fr=a la cantidad fraccionaria que ocupara del total*/
+        grid-template-rows: 400px;/*para circulos yo vi que era mejor en 400*/
+       /*grid: 200px 800px / 300px 300px;*/
+       column-gap: 2rem; /*separacion entre columnas*/
+        }
+    }
+ 
+    .servicio {/*toda la configuracion para centrar*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .servicio h3 {
+        color: var(--secundario);
+        font-weight: normal;
+    }
+    .servicio p{
+        line-height: 2;/*interlineado de texto*/
+        text-align: center;
+    }
+    .servicio .iconos {
+        /*Tamaños de rectangulos de icono de fondo del mismo tamaño para que sea cuadrado*/
+        height: 15rem;
+        width: 15rem;
+
+        background-color: var(--secundario);
+        border-radius: 50%;/* con 50% hace que el cuadrado sea un circulo*/
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+
+
+
+
+  /*FORMATO FORMULARIO*/
+    /*Diseño Formulario*/
+    .formulario{
+        background-color: var(--tercero);
+        width: min(50rem,100%);/*min(,) compara que valor es menor entre los dos puesto y configura asi el cuadro*/
+        margin: 0 auto;/*cuando es un elemento tipo block tome todo el espacio disponible y padre no sea displyflex*/
+        padding: 2rem;
+        border-radius: 2rem;
+        resize: none
+    }
+    .formulario fieldset{
+        border: none;
+    }
+
+    .formulario legend{
+        color: var(--primario);
+        text-align: center;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin-bottom: 2rem;    
+    }
+
+    /*Diseño campos*/
+ @media (min-width: 768px){
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto auto 20 rem;
+        column-gap: 1rem;
+    }
+    }
+
+    .campo{
+        margin-bottom: 1rem;
+    }
+
+    .campo label{
+        color: var(--blanco);
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      
+    }
+    .campo textarea{
+        height: 20rem;
+    }
+
+    .input-text {
+        width: 100%;
+        border: none;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+        
+
+    }
+
+
+    .Texto-general{
+        text-align: center;
+        text-size-adjust: auto ;
+        line-height: 2.5rem;
+
+    }
+    .yo{
+        background-image: url(../img/yo.jfif);/* al estar esto dentro de la carpeta css hay que ponerle .. para que se vaya a la carpeta de arriba y apartir de ahi busce la carpeta img*/
+        background-repeat: no-repeat;/*para cuando la imagen quede chica no se repita*/
+        background-position: center;
+        height: 480px;
+        position: relative;/*el padre siempre tiene que tener posicion relativa para poner al hijo como absoluta*/
+        margin-bottom: 2rem;
+            }
+
+@media (min-width: 768px) {
+    .Texto-general{
+        line-height: 5rem;
+    }
+    
+}
