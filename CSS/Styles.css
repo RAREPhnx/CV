@@ -4,13 +4,8 @@
         --blanco:#ffffff;
         --negro:#212121;
         --primario: #d3dfff;/*se puede poner como rgba para hacerlos transparentes*/
-<<<<<<< HEAD
         --secundario: #587de6d7; 
         --tercero: #0e46df6b;
-=======
-        --secundario: #5c82e9cb; 
-        --tercero: #757575;
->>>>>>> bd334bd7e59369f086254f087e08d9aa85218447
         --cuarto: #ffffff;     
         
         --fuente-principal: 3.8rem;
