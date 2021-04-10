@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+  "settings": {
+	"liveServer.settings.multiRootWorkspaceName": "freelancer_inicio",
+	"diffEditor.wordWrap": "on"
+	}
+}
